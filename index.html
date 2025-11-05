@@ -2,11 +2,29 @@
 <html>
 <head>
 <title>Power BI Report Dashboard</title>
+<style>
+  /* Container to make iframe responsive */
+  .responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    /* Aspect ratio 16:9 (height / width * 100) */
+    padding-bottom: 216%; /* Based on your height/width ratio 852/393 */
+    height: 0;
+    overflow: hidden;
+  }
+  .responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
 </head>
 <body>
-<h1>My Power BI Report</h1>
-<!-- Paste your iframe code below: -->
-<iframe title="Openlinks PowerBi Dashboard" width="373.5" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiMGJmNWQxNDMtYTlkZi00YWU3LWIxNzctNDk2YTg4NDZjMjc2IiwidCI6IjczMGE1MTU5LTVhOWYtNGI2Ny04NjkyLWQwN2E3MmVkYmNiNiJ9" frameborder="0" allowFullScreen="true"></iframe>
+<div class="responsive-iframe-container">
+  <iframe title="Openlinks PowerBi Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiMGJmNWQxNDMtYTlkZi00YWU3LWIxNzctNDk2YTg4NDZjMjc2IiwidCI6IjczMGE1MTU5LTVhOWYtNGI2Ny04NjkyLWQwN2E3MmVkYmNiNiJ9" allowfullscreen="true"></iframe>
+</div>
 </body>
-
 </html>
