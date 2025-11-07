@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Power BI Report Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This is critical for mobile view -->
-<style>
-  .responsive-iframe-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 216%; /* aspect ratio */
-    height: 0;
-    overflow: hidden;
-  }
-  .responsive-iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    /* Optional: Force the embedded report to scale down on small screens */
-    transform-origin: top left;
-  }
-  
-  /* Additional media query to tweak height or scaling on small devices */
-  @media only screen and (max-width: 600px) {
-    .responsive-iframe-container {
-      padding-bottom: 150%; /* reduce height ratio for better mobile fit */
+  <title>Power BI Report Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .powerbi-container {
+      width: 100%;
+      max-width: 900px;     /* Looks good on laptop/desktop */
+      margin: 0 auto;       /* Center on page */
+      height: 80vh;
+      min-height: 400px;
     }
-    .responsive-iframe-container iframe {
-      /* You can apply scale here if needed */
-      /* transform: scale(0.9); */ 
-      /* Adjust height or allow overflow for scrolling */
+    .powerbi-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
-  }
-</style>
+    @media (max-width: 600px) {
+      .powerbi-container {
+        max-width: 100vw;
+        height: 90vh;
+        min-height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="responsive-iframe-container">
-  <iframe title="openlinks powerbi Drill down cross report" src="https://app.powerbi.com/view?r=eyJrIjoiNDU1MDE5ODUtYWZjNi00ZDc1LWFiNGYtMzFhMjdjNjlmM2JmIiwidCI6IjczMGE1MTU5LTVhOWYtNGI2Ny04NjkyLWQwN2E3MmVkYmNiNiJ9" frameborder="0" allowFullScreen="true"></iframe>
-</div>
+  <div class="powerbi-container">
+    <iframe 
+      title="openlinks powerbi Drill down cross report" 
+      src="https://app.powerbi.com/view?r=eyJrIjoiNDU1MDE5ODUtYWZjNi00ZDc1LWFiNGYtMzFhMjdjNjlmM2JmIiwidCI6IjczMGE1MTU5LTVhOWYtNGI2Ny04NjkyLWQwN2E3MmVkYmNiNiJ9" 
+      allowfullscreen="true"></iframe>
+  </div>
 </body>
 </html>
-
